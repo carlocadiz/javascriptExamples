@@ -31,29 +31,33 @@ var array = ["Banana", "Apples", "Oranges", "Blueberries"];
 
 // 1. Remove the Banana from the array.
 
-array.shift();
-console.log(array);
+// 451902766392815745
 
-// 2. Sort the array in order.
-console.log(array.sort());
+// Create an object and an array which we will use in our facebook exercise.
 
-// 3. Put "Kiwi" at the end of the array.
-array.push("Kiwi");
-console.log(array);
+// 1. Create an object that has properties "username" and "password". Fill those values in with strings.
 
-// 4. Remove "Apples" from the array.
-array.shift();
-console.log(array);
 
-// 5. Sort the array in reverse order. (Not alphabetical, but reverse
-// the current Array i.e. ['a', 'c', 'b'] becomes ['b', 'c', 'a'])
-console.log(array.reverse());
-// you should have at the end:
-// ["Kiwi", "Oranges", "Blueberries"]
+// 2. Create an array which contains the object you have made above and name the array "database".
 
-// using this array,
- var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
-// access "Oranges".
-console.log(array2[1][1][0]);
+// 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
+var database = [{username:"carlo", password: "123"}];
+var newsfeed = [{username:"lorina", timeline:"hello world"},
+                {username:"sophia", timeline:"watching stranger thins"},
+                {username:"olivia", timeline:"loves karate"}];
+
+var userNamePrompt = prompt("What's your username?");
+var passwordPrompt = prompt("What's your password");
+
+function signIn(user, pass) {
+  if (user === database[0].username &&
+      pass === database[0].password) {
+      console.log(newsfeed);
+  } else {
+    alert("Sorry, wrong username and password");
+  }
+}
+
+signIn(userNamePrompt, passwordPrompt);
 
 
